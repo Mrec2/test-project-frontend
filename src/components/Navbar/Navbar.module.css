@@ -1,41 +1,224 @@
-.navbarMain {
-    background-color: #333; /* Background color of the navbar */
-    border-bottom: 2px solid #555; /* Bottom border for a slight 3D effect */
-    padding: 0.5rem 1rem; /* Padding around the content */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    height: var(--navbar-height); /* Use the navbar height variable */
+/* Estilos base */
+*{
+    text-decoration: none;
+    list-style: none;
 }
 
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
 
-.unorderedList {
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    height: 7rem;
+    margin: 0 auto;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
+    transition: all .50s ease;
 }
 
-.listItem {
-    margin-right: 2rem; 
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.listItem:last-child {
-    margin-right: 0; 
+.logo span {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 20px 0 0;
 }
 
-.link {
-    font-size: 1.25rem;
-    text-decoration: none; 
-    color: #fff; 
-    font-weight: bold; 
-    transition: color 0.3s ease-in-out; 
+.navbar {
+    display: flex;
 }
 
-.link:hover,
-.link:focus {
-    color: #ddd; 
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 30px;
+    transition: all .50s ease;
 }
 
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.menuIcon {
+    width: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 110;
+    display: none;
+}
+
+
+/* MEDIA QUERYS: */
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 1010px (993px - 1200px)*/
+@media screen and (min-width: 1010px) and (max-width: 1200px) {
+
+    .contenedor {
+        width: 80%;
+        justify-content: space-around;
+        overflow: hidden;
+        /* transition: .2s; */
+    }
+
+    .navbar a {
+        font-size: 1.6rem;
+        margin: 0 12px;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 1010px)*/
+@media screen and (min-width: 769px) and (max-width: 1010px) {
+
+    .contenedor {
+        width: 80%;
+        justify-content: space-between;
+        transition: .2s;
+        overflow: hidden;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 270px;
+        height: auto;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: all .50s ease;
+
+    }
+
+    .navbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar.open {
+        right: 10%;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+
+    .contenedor {
+        width: 70%;
+        justify-content: space-between;
+        transition: .2s;
+        overflow: hidden;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 270px;
+        height: auto;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: all .50s ease;
+
+    }
+
+    .navbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar.open {
+        right: 15%;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px){
+
+    .contenedor {
+        width: 80%;
+        justify-content: space-between;
+        transition: .2s;
+        overflow: hidden;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%; 
+        width: 270px;
+        height: auto;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar.open {
+        right: 10%;
+    }
+   
+    
+}
