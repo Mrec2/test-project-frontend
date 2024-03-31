@@ -1,49 +1,216 @@
+/* Estilos base */
 .contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* background-color: aqua; */
 }
 
-/* SECCION PRINCIPAL */
 .sectionPrincipal {
-  width: 100%;
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 5fr 1fr;
-  place-content: center;
+    width: 100%;
+    /* height: 90vh; */
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    place-content: center;
+    /* background-color: rebeccapurple; */
 }
 
 .sectionTexto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sectionPrincipalTitulo {
-  font-size: 8.2rem;
-  margin-bottom: 10px;
-}
-
-.sectionPrincipalParrafo {
-  font-size: 1.8rem;
+    font-size: 6rem;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .sectionPrincipalBtn {
-  display: inline-block;
-  width: 100px;
-  padding: 10px 20px;
-  margin-top: 15px;
-  font-size: 1.4rem;
+    display: inline-block;
+    width: 150px;
+    margin-top: 15px;
+    font-size: 1.6rem;
+    border-radius: 28px;
+    color: #ffffff;
+    background: #000;
+    padding: 15px 20px;
+    border: solid #212121 .5px;
+    text-decoration: none;
+}
+
+.sectionPrincipalBtn:hover {
+    background: linear-gradient(to bottom, #000000, #111111);
 }
 
 .sectionImagen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.imgPortada{
-  width: 530px;
+.imgPortada {
+    width: 530px;
 }
+
+/* MEDIA QUERYS: */
+
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 993px (993px - 1200px)*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+    
+    .sectionPrincipalTitulo {
+        font-size: 5rem;
+    }
+
+
+    /* prueba */
+    .sectionPrincipal {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 20px auto 0;
+        /* height: auto;
+        margin: 20px 0;
+        background-color: red;  */
+    }
+
+    .sectionPrincipalBtn {
+        margin-bottom: 50px;
+    }
+
+    .sectionImagen {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .imgPortada {
+        width: 100%;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 992px)*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: purple;  */
+    }
+
+    .sectionPrincipal {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 20px auto 0;
+    }
+
+    .sectionPrincipalTitulo {
+        font-size: 4rem;
+    }
+
+    .sectionPrincipalBtn {
+        margin-bottom: 50px;
+    }
+
+    .sectionImagen {
+        height: auto;
+        align-items: baseline;
+    }
+
+    .imgPortada {
+        width: 100%;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: orange; */
+    }
+
+    .sectionPrincipal {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .sectionTexto {
+        align-items: center;
+    }
+
+    .sectionPrincipalTitulo {
+        font-size: 5rem;
+        text-align: start;
+    }
+
+    .sectionImagen {
+        order: -1;
+    }
+
+    .imgPortada {
+        order: 1;
+        width: 100%;
+        max-width: 530px;
+    }
+
+    .sectionPrincipalBtn {
+        margin-bottom: 30px;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px){
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: chartreuse; */
+    }
+
+    .sectionPrincipal {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        order: 2;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+
+    .sectionPrincipalTitulo {
+        font-size: 3.5rem;
+    }
+
+    .sectionImagen {
+        order: -1;
+    }
+
+    .imgPortada {
+        width: 100%;
+    }
+}
+
+
 
 
 

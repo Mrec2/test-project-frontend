@@ -1,22 +1,101 @@
 .contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .seccionPrincipal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  padding-bottom: 80px;
+    display: flex;
+    place-items: center;
+    gap: 80px;
+    padding-bottom: 80px;
 }
 
 .seccionInfoTitle {
-  font-size: 3rem;
-  line-height: 1.5;
+    font-size: 4.2rem;
+    line-height: 1.5;
 }
 
 .seccionImagenIcon {
-  width: 350px;
+    width: 350px;
 }
 
+/* MEDIA QUERYS: */
 
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 993px (993px - 1200px)*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    .contenedor{
+        width: 85%;
+        overflow: hidden;
+    }
+
+    .seccionInfoTitle {
+        font-size: 4rem;
+    }
+    
+    .seccionImagenIcon {
+        width: 320px;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 992px)*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .contenedor{
+        width: 85%;
+        overflow: hidden;
+        /* background-color: blue;  */
+    }
+
+    .seccionInfoTitle {
+        font-size: 3.8rem;
+    }
+    
+    .seccionImagenIcon {
+        width: 280px;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    .contenedor{
+        width: 85%;
+        overflow: hidden;
+        /* background-color: blue; */
+    }
+
+    .seccionInfoTitle {
+        font-size: 3.5rem;
+    }
+    
+    .seccionImagenIcon {
+        width: 250px;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px) {
+
+    .contenedor{
+        width: 85%;
+        overflow: hidden;
+        /* background-color: blue; */
+    }
+
+    .seccionPrincipal {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .seccionInfoTitle {
+        font-size: 2.8rem;  
+    }
+    
+    .seccionImagenIcon {
+        width: 250px;
+    }
+}

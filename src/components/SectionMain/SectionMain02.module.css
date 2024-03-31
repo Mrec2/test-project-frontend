@@ -1,53 +1,214 @@
 .contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* background-color: rgb(224, 224, 0); */
 }
 
-/* SECCION 2 */
+
+
 .sectionConocimientos {
-  width: 100%;
-  height: 70vh;
-  display: grid;
-  grid-template-columns: 5fr 4fr;
-  gap: 50px;
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 50px;
 }
 
 .sectionConocimientosContenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .sectionConocimientosTitulo {
-  font-size: 4.5rem;
+    font-size: 6.2rem;
 }
 
 .sectionConocimientosParrafo {
-  font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    color: #868f97;
+    line-height: 2;
 }
 
 .sectionConocimientosParrafoEdit {
-  text-decoration: underline;
-  color: #e82223;
+    text-decoration: underline;
+    color: #e82223;
 }
 
 .sectionConocimientosBtn {
-  display: inline-block;
-  align-self: start;
-  padding: 10px 15px;
-  font-size: 1.4rem;
+    display: inline-block;
+    align-self: start;
+    padding: 10px 15px;
+    font-size: 1.6rem;
+    border-radius: 28px;
+    color: #ffffff;
+    background: #000;
+    padding: 15px 20px 15px 20px;
+    border: solid #212121 .5px;
+    text-decoration: none;
+    width: 150px;
 }
 
 .sectionConocimientosImagen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sectionConocimientosImg {
-  width: 300px;
+    width: 350px;
 }
 
 
+/* MEDIA QUERYS: */
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 993px (993px - 1200px)*/
+@media screen and (min-width: 993px) and (max-width: 1200px){
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: olive; */
+    }
+
+    .sectionConocimientos {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sectionConocimientosTitulo {
+        font-size: 4.8rem;
+        text-align: start;
+    }
+
+    .sectionConocimientosParrafo {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .sectionConocimientosImg {
+        max-width: 350px;
+    }
+
+    .sectionConocimientosBtn {
+        align-self: center;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 992px)*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: teal; */
+    }
+
+    .sectionConocimientos {
+        width: 90%;
+        height: auto;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sectionConocimientosTitulo {
+        font-size: 3.5rem;
+        text-align: start;
+    }
+
+    .sectionConocimientosParrafo {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .sectionConocimientosImg {
+        max-width: 250px;
+    }
+
+    .sectionConocimientosBtn {
+        align-self: center;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: brown; */
+    }
+
+    .sectionConocimientos {
+        width: 90%;
+        height: auto;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sectionConocimientosTitulo {
+        font-size: 3rem;
+        text-align: start;
+    }
+
+    .sectionConocimientosParrafo {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .sectionConocimientosImg {
+        max-width: 230px;
+    }
+
+    .sectionConocimientosBtn {
+        align-self: center;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px){
+
+    .contenedor {
+        width: 90%;
+        overflow: hidden;
+        /* background-color: chocolate; */
+    }
+
+    .sectionConocimientos {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    .sectionConocimientosContenido {
+        order: 2;
+    }
+
+    .sectionConocimientosTitulo {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .sectionConocimientosImagen {
+        order: -1;
+    }
+
+    .sectionConocimientosImg {
+        max-width: 200px;
+    }
+
+    .sectionConocimientosBtn {
+        align-self: center;
+    }
+}
