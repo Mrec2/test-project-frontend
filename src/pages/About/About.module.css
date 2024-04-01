@@ -1,8 +1,18 @@
 .aboutEmpleados {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem;
-    margin-bottom: 1rem;
-    padding: 0 3rem;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem; */
+
+    /* margin-bottom: 1rem;
+    padding: 0 3rem; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }

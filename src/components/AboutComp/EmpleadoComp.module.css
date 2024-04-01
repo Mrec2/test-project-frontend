@@ -1,42 +1,85 @@
-.empleado {
-    border: 1px solid green;
-    border-radius: 15px;
-    height: 200px;
-    width: 400px;
-    margin: 60px 0px;
-    position: relative;
-    transition: all 0.5s ease-in-out;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 
+.card{
+    min-width: 300px;
+    max-width: 350px;
+    height: auto;
+    max-height: 600px;
+    background-color: #111116;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0px 7px 15px 0px rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover{
+    transform: scale(1.01);
+}
+
+.cardContenetorImg{
+    width: 85%;
+    margin: 20px auto;
+}
+
+.cardImg{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cardContenedorInfo{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardTitulo{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.cardSubTitulo{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cardParrafo{
+    font-size: 1.2rem;
+}
+
+.cardContenedorBtn{
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px 0;
     text-align: center;
 }
 
-.empleado:hover {
-    box-shadow: 0px 3px 5px 1px lightgreen;
-    /*box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);*/
+.cardBtn{
+    display: inline-block;
+    width: 150px;
+    color: white;
+    background-color: #0e0e0e;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0px 7px 15px 0px rgba(255,255,255,0.1);
+    text-align: center;
+    cursor: pointer;
+}  
+
+.cardBtn:hover{
+    background-color: #060606;
 }
 
-.empleadoFoto {
-    display: flex;
-    justify-content: center;
-}
 
-.empleadoFotoImg {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    position: absolute;
-    top: -50px;
-    border: 1px solid green;
-}
-
-.empleadoNombre {
-    margin-top: 60px;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-.empleadoDescripcion {
-    margin-bottom: 10px;
-    font-size: 20px;
-}
