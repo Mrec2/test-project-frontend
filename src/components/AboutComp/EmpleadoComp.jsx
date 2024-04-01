@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styles from "./EmpleadoComp.module.css";
 
 
@@ -7,29 +6,44 @@ const EmpleadoComp = ({ empleado }) => {
     const { nombre, descripcion, tecnologias, fotoImg } = empleado;
 
     return (
-        <div className={styles.empleado}>
+        <>
+            <article className={styles.card}>
 
-            <div className={styles.empleadoFoto}>
-                <img src={fotoImg} alt="foto de empleado" className={styles.empleadoFotoImg} />
-            </div>
+                <section className={styles.cardContenetorImg}>
 
-            <div className={styles.empleadoNombre}>{nombre}</div>
-            <div className={styles.empleadoDescripcion}>{descripcion}</div>
-            <div className={styles.empleadoTecnologias}>{tecnologias}</div>
-            <div className={styles.empleadoLinkedin}></div>
+                    <img
+                        src={fotoImg}
+                        alt='Imagen de Card'
+                        className={styles.cardImg}
+                    />
 
-        </div>
+                </section>
+
+                <section className={styles.cardContenedorInfo}>
+
+                    <h1 className={styles.cardTitulo}>
+                        {nombre}
+                    </h1>
+
+                    <h3 className={styles.cardSubTitulo}>
+                        {descripcion}
+                    </h3>
+
+                    <p className={styles.cardParrafo}>
+                        {tecnologias}
+                    </p>
+
+                </section>
+
+                <section className={styles.cardContenedorBtn}>
+
+                    <a href="#" className={styles.cardBtn}>Contáctame</a>
+
+                </section>
+
+            </article>
+        </>
     );
-};
-
-// Define las propiedades esperadas para el componente EmpleadoComp utilizando PropTypes
-EmpleadoComp.propTypes = {
-    empleado: PropTypes.shape({ // Define la forma esperada del objeto empleado
-        nombre: PropTypes.string.isRequired,
-        descripcion: PropTypes.string.isRequired,
-        tecnologias: PropTypes.string.isRequired,
-        fotoImg: PropTypes.string, // Propiedad fotoImg: tipo string (opcional)
-    }).isRequired,
 };
 
 export default EmpleadoComp; 

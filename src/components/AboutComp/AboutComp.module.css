@@ -1,41 +1,48 @@
 .aboutMain {
-    margin-top: 1.5rem;
-    padding: 0 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
 .aboutSection {
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    margin-bottom: 1rem;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 50px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0px 7px 15px 0px rgba(255,255,255,0.1);
+    margin: 20px 0 40px;
+
+
+ 
 }
 
 .imgAboutSection {
-    width: 35rem;
-    height: 25rem;
+    width: 100%;
+    height: 100%;
 }
 
 .imgAboutSection > img {
     width: 100%;
     height: 100%;
-    border-top-left-radius: 2.5rem;
-    border-bottom-left-radius: 2.5rem;
-}
-
-.textoAboutSection {
-    border-right: 3px solid green;
-    border-top-right-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
+    border-radius: 10px 0 0 10px;
 }
 
 .textoAboutSection > h2 {
     font-size: 2.5rem;
     font-weight: bolder;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .textoAboutSection > p {
     margin-bottom: 1rem;
     text-align: justify;
-    padding: 0 2rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    color: #868f97;
+    margin-right: 50px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
