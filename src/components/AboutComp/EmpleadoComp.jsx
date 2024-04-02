@@ -7,41 +7,51 @@ const EmpleadoComp = ({ empleado }) => {
 
     return (
         <>
-            <article className={styles.card}>
+            <section className={styles.cards}>
 
-                <section className={styles.cardContenetorImg}>
+                <article className={styles.cardItem}>
 
-                    <img
-                        src={fotoImg}
-                        alt='Imagen de Card'
-                        className={styles.cardImg}
-                    />
+                    <div className={styles.cardContent}>
 
-                </section>
+                        <figure className={styles.cardPicture}>
 
-                <section className={styles.cardContenedorInfo}>
+                            <a href="linkedin.com/in/cochises">
+                                <img
+                                    src={fotoImg}
+                                    alt="Imagen de Tecnologia"
+                                    className={styles.cardImg}
+                                />
+                            </a>
 
-                    <h1 className={styles.cardTitulo}>
-                        {nombre}
-                    </h1>
+                        </figure>
 
-                    <h3 className={styles.cardSubTitulo}>
-                        {descripcion}
-                    </h3>
+                        <div className={styles.cardTexts}>
 
-                    <p className={styles.cardParrafo}>
-                        {tecnologias}
-                    </p>
+                            <h1 className={styles.cardTitle}>
+                                {nombre}
+                            </h1>
 
-                </section>
+                            <h2 className={styles.subTitle}>
+                                {descripcion}
+                            </h2>
 
-                <section className={styles.cardContenedorBtn}>
+                            <p className={styles.cardParagraph}>
+                                {tecnologias}
+                            </p>
 
-                    <a href="#" className={styles.cardBtn}>Contáctame</a>
+                        </div>
 
-                </section>
+                        <section className={styles.cardContenedorBtn}>
 
-            </article>
+                            <a href="#" className={styles.cardBtn}>Contáctame</a>
+
+                        </section>
+
+                    </div>
+
+                </article>
+
+            </section>
         </>
     );
 };

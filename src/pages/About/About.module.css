@@ -2,17 +2,54 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap;
-
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem; */
-
-    /* margin-bottom: 1rem;
-    padding: 0 3rem; */
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
+
+    /* background-color: aqua; */
+}
+
+/* MEDIA QUERYS: */
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 993px (993px - 1200px)*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    .aboutEmpleados{
+        width: 95%;
+        /* background-color: orangered; */
+        justify-content: space-evenly;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 992px)*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .aboutEmpleados{
+        width: 95%;
+        /* background-color: rgb(58, 188, 14); */
+        justify-content: center;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    .aboutEmpleados{
+        width: 95%;
+        /* background-color: rgb(1, 44, 28); */
+        justify-content: center;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px) {
+
+    .aboutEmpleados{
+        width: 80%;
+        /* background-color: rgb(15, 0, 124); */
+        justify-content: center;
+    }
 }
