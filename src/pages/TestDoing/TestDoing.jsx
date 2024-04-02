@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import styles from "./TestDoing.module.css";
 
 const TestDoing = () => {
@@ -25,15 +24,15 @@ const TestDoing = () => {
 
   return (
     <div className={styles.testDoingContainer}>
-      {miTest === "Javascript" && <h1>Test de Javascript</h1>}
-      {miTest === "CSS" && <h1>Test de CSS</h1>}
-      {miTest === "HTML" && <h1>Test de HTML</h1>}
-      {miTest === "Java" && <h1>Test de Java</h1>}
+      {miTest === "js" && <h1>Test de Javascript</h1>}
+      {miTest === "css" && <h1>Test de CSS</h1>}
+      {miTest === "html" && <h1>Test de HTML</h1>}
+      {miTest === "java" && <h1>Test de Java</h1>}
       <div>
         {datos.length > 0 ? (
           datos.map((item, index) => (
             <div key={index}>
-              <h2>{item.pregunta}</h2>
+              <h2 className={styles.tituloPregunta}>{item.pregunta}</h2>
               <ul>
                 {item.opciones.map((opcion, opcionIndex) => (
                   <li key={opcionIndex}>{opcion}</li>

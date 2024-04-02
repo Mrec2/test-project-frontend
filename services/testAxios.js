@@ -9,8 +9,12 @@ class TestAxios extends InitAxios {
   // }
 
   constructor() {
-    // super("http://localhost:8080/QuizMatrix-backend/testServlet/");
+    // IMPORTANTE -> AHORA ES preguntas el servlet
+
     super("http://localhost:8080/QuizMatrix-backend/preguntas/");
+    // super("http://localhost:8080/QuizMatrix-backend/testServlet/");
+    // super("http://localhost:8080/QuizMatrix-backend/testServlet");
+    // Alberto super("http://localhost:8080/QuizMatrix-backend/testServlet");
   }
 
   async postTest(data) {
