@@ -1,5 +1,13 @@
+body {
+  color: black;
+}
+
+.testDoingContainer h2 {
+  color: #fff;
+}
+
 .testDoingContainer h1 {
-    color: #333;
+    color: #fff;
     text-align: center;
   }
   

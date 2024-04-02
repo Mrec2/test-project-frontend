@@ -10,6 +10,7 @@ const TestDoing = () => {
   useEffect(() => {
     const datosLocalStorage = localStorage.getItem("misDatos");
     if (datosLocalStorage) {
+      console.log("misDatos", datosLocalStorage);
       setDatos(JSON.parse(datosLocalStorage));
     }
   }, []);
@@ -24,10 +25,10 @@ const TestDoing = () => {
 
   return (
     <div className={styles.testDoingContainer}>
-      {miTest === "js" && <h1>Test de Javascript</h1>}
-      {miTest === "css" && <h1>Test de CSS</h1>}
-      {miTest === "html" && <h1>Test de HTML</h1>}
-      {miTest === "java" && <h1>Test de Java</h1>}
+      {miTest === "Javascript" && <h1>Test de Javascript</h1>}
+      {miTest === "CSS" && <h1>Test de CSS</h1>}
+      {miTest === "HTML" && <h1>Test de HTML</h1>}
+      {miTest === "Java" && <h1>Test de Java</h1>}
       <div>
         {datos.length > 0 ? (
           datos.map((item, index) => (

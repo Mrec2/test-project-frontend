@@ -9,12 +9,15 @@ class TestAxios extends InitAxios {
   // }
 
   constructor() {
-    super("http://localhost:8080/test-project-backend/testServlet/");
+    // super("http://localhost:8080/QuizMatrix-backend/testServlet/");
+    super("http://localhost:8080/QuizMatrix-backend/preguntas/");
   }
 
   async postTest(data) {
     try {
       // const response = await this.axios.post(`${data}`, data);
+
+      console.log(data);
       const response = await this.axios.post(`${data}`, data);
       // alert("Datos enviados correctamente. -->" + data);
       localStorage.setItem("queTest", data);
