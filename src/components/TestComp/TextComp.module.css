@@ -1,9 +1,196 @@
 .testInfo {
-    font-size: 1.6rem;
-    color: #333;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
     text-align: center;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: auto;
+    padding-bottom: 70px;
+}
+
+.titulo{
+    font-size: 12rem;
+    padding: 30px 0 15px;
+}
+
+.parrafo{
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    color: #868f97;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.parrafoTecnologia{
+    font-family: "Inter", sans-serif;
+    font-size: 2.2rem;
+    line-height: 2;
+    color: #868f97;
+    font-weight: 300;
+}
+
+.subTitulo{
+    font-size: 6rem;
+    margin-bottom: 30px;
+}
+
+.listado{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.texto{
+    font-size: 5rem;
+    padding: 30px 0;
+}
+
+/* MEDIA QUERYS: */
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 993px (993px - 1200px)*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    .testInfo{
+        max-width: 85%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .titulo{
+        font-size: 11rem;
+        padding-bottom: 30px;
+    }
+
+    .parrafo{
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .subTitulo{
+        font-size: 6rem;
+    }
+
+    .parrafoTecnologia{
+        text-align: left;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .texto{
+        font-size: 3rem;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 992px)*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .testInfo{
+        max-width: 85%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .titulo{
+        font-size: 11rem;
+        padding-bottom: 30px;
+    }
+
+    .parrafo{
+        text-align: left;
+        font-size: 1.9rem;
+    }
+
+    .subTitulo{
+        font-size: 6rem;
+    }
+
+    .parrafoTecnologia{
+        text-align: left;
+        font-size: 1.9rem;
+        margin-bottom: 20px;
+    }
+
+    .texto{
+        font-size: 3rem;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    .testInfo{
+        max-width: 85%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .titulo{
+        font-size: 10rem;
+        padding-bottom: 30px;
+    }
+
+    .parrafo{
+        text-align: left;
+    }
+
+    .subTitulo{
+        font-size: 5rem;
+    }
+
+    .parrafoTecnologia{
+        text-align: left;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .texto{
+        font-size: 3rem;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px) {
+
+    .testInfo{
+        max-width: 85%;
+        /* background-color: red; */
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .titulo{
+        font-size: 8rem;
+        padding-bottom: 30px;
+    }
+
+    .parrafo{
+        text-align: left;
+    }
+
+    .subTitulo{
+        font-size: 5rem;
+    }
+
+    .parrafoTecnologia{
+        text-align: left;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .texto{
+        font-size: 3rem;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 40px;
+    }
 }
