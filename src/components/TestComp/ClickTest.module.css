@@ -29,9 +29,11 @@
     max-width: 300px;
     max-height: 500px;
     height: auto;
+    cursor: pointer;
 }
 .cardItem:hover{
     transform: scale(1.05);
+    color: blue;
 }
 
 .cardContent{

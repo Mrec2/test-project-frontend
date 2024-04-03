@@ -32,26 +32,6 @@ const TextComp = () => {
 
                 </ul>
 
-                {/* 
-                <h2>Niveles</h2>
-
-                <ul>
-
-                    <li className={styles.parrafo}>
-                        <strong>Principiante: </strong>Comienza desde lo básico y aprende los fundamentos.
-                    </li>
-
-                    <li className={styles.parrafo}>
-                        <strong>Intermedio: </strong>Para aquellos que se sienten cómodos con lo básico y están listos para aprender conceptos más complejos.
-                    </li>
-
-                    <li className={styles.parrafo}>
-                        <strong>Avanzado: </strong>Pon a prueba tu experiencia y conocimiento avanzado en escenarios del mundo real.
-                    </li>
-
-                </ul> 
-                */}
-
                 <p className={styles.texto}>Elige una prueba que se adapte a tus habilidades y empieza a mejorar hoy mismo!</p>
 
             </div>

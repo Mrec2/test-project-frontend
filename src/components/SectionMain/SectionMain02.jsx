@@ -16,7 +16,7 @@ const SectionMain02 = () => {
 
                     <p className={styles.sectionConocimientosParrafo}>
                         Desafíate con pequeños tests. Cada tests está diseñado por los creadores
-                        de <span className={styles.sectionConocimientosParrafoEdit}>TestsOnlineJava</span> para ayudarte a fortalecer tus conocimientos.
+                        de <span className={styles.sectionConocimientosParrafoEdit}>QuizMatrix</span> para ayudarte a fortalecer tus conocimientos.
                     </p>
 
                     <button className={styles.sectionConocimientosBtn}>Únete ahora</button>
