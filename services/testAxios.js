@@ -32,6 +32,7 @@ class TestAxios extends InitAxios {
         localStorage.setItem("misDatos", JSON.stringify(response.data));
       } else if (response.status === 400) {
         console.error("Respuesta del servidor no fue 200 OK", response.data);
+        window.location.href = "/test-doing";
       }
     } catch (error) {
       console.error("Error al enviar los datos:", error);

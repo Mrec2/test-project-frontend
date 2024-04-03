@@ -9,6 +9,7 @@ import FaqPage from "../pages/FaqPage/FaqPage.jsx";
 import Register from "../pages/Register/Register.jsx";
 import TestDoing from "../pages/TestDoing/TestDoing.jsx";
 import Terms from "../pages/TermsOfService/Terms.jsx";
+import TestResults from "../pages/TestResults/TestResults.jsx";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
       <Route path="/FAQ" element={<FaqPage />} />
       <Route path="/test-doing" element={<TestDoing />} />
       <Route path="/terms" element={<Terms />} />
+      <Route path="/test-results" element={<TestResults />} />
     </Routes>
   );
 };
