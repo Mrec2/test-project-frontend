@@ -10,26 +10,25 @@ const Footer = () => {
             <div className={styles.footerContent}>
 
                 <p>
-                    Copyright © 2024 Made by Mario, Juan Manuel, Alberto, Alejandro. All
-                    rights reserved.
+                    Copyright © 2024 Hecho por Mario Fernández, Juan Manuel, Alberto González, Juan Alberto. Todos los derechos reservados.
                 </p>
 
                 <ul className={styles.footerLinks}>
 
                     <li>
-                        <a href="/terms">Terms of Service</a>
+                        <a href="/terms">Términos de servicio</a>
                     </li>
 
                     <li>
-                        <a href="/Faq">FAQ</a>
+                        <a href="/Faq">Preguntas frecuentes</a>
                     </li>
 
                     <li>
-                        <a href="/about">About Us</a>
+                        <a href="/about">Acerca de nosotros</a>
                     </li>
 
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/contact">Contacto</a>
                     </li>
 
                 </ul>

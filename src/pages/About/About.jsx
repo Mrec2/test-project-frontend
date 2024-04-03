@@ -15,7 +15,7 @@ const About = () => {
     const empleado2 = {
         nombre: "Alberto González",
         descripcion: "Front-end Developer",
-        tecnologias: "HTML, CSS, Bootstrap 5, Javascript, React",
+        tecnologias: "HTML, CSS, Bootstrap 5, Sass, Javascript, React",
         fotoImg: "https://media.licdn.com/dms/image/D4E03AQGC2lUUubgmtw/profile-displayphoto-shrink_800_800/0/1670689613174?e=1717632000&v=beta&t=HSNM6v0i_2fNVteCpSB-8UrvlvaaOgW7cAr_Ir1v7Tg",
     };
 

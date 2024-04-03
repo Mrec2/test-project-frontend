@@ -8,7 +8,7 @@ const TextComp = () => {
 
             <div className={styles.testInfo}>
 
-                <h1 className={styles.titulo}>Tests Online</h1>
+                <h1 className={styles.titulo}>QuizMatrix</h1>
 
                 <p className={styles.parrafo}>
                     Nuestra plataforma ofrece una variedad de pruebas en línea para evaluar y mejorar tu conocimiento en diferentes áreas.

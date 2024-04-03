@@ -14,7 +14,7 @@ const AboutComp = () => {
 
                     <div className={styles.textoAboutSection}>
 
-                        <h2>Acerca de Java Test Online Test</h2>
+                        <h2>Acerca de QuizMatrix</h2>
 
                         <p>
                             Desarrollando una plataforma para la realización de tests online .

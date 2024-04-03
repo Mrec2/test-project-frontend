@@ -23,7 +23,7 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                    <a href="/about">Sobre nuestra web</a>
+                    <a href="/about">Acerca de nosotros</a>
                 </li>
 
                 <li>
