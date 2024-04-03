@@ -1,17 +1,21 @@
-body {
-  color: black;
-}
+/* body {
+  color: red;
+} */
 
 .testDoingContainer h2 {
   color: #fff;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .testDoingContainer h1 {
-    color: #fff;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    color: #ffffff;
     text-align: center;
     font-size: 6.5rem;
     font-weight: 900;
-    margin-bottom: 30px;
 }
 
 .tituloPregunta {
@@ -20,7 +24,9 @@ body {
 }
 
 .testDoingContainer div {
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 90%;
 }
 
 .testDoingContainer ul {
@@ -28,6 +34,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .testDoingContainer li {
@@ -37,9 +44,30 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 1.8rem;
     color: #868f97;
-    width: 500px;
+    /* width: 500px; */
+    width: 100%;
     text-align: center;
     border: 1px solid;
     word-wrap: break-word;
     max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    /* .testDoingContainer{
+        background-color: red;
+    } */
+
+    .testDoingContainer ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .testDoingContainer li {
+         width: 100%;
+    }
 }

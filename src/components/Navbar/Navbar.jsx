@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className={styles.contenedor}>
 
             <a href="/" className={styles.logo}>
-                <span>TestOnline</span>
+                <span>QuizMatrix</span>
             </a>
 
             <ul className={styles.navbar}>
