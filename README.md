@@ -13,9 +13,10 @@ QuizMatrix is a web platform designed to enhance programming and web development
 - **Backend:** Java with Spring (Note: This README focuses on the frontend aspect.
 
 ## Authors
-- [@Mrec2](link-to-your-GitHub-profile) - FullStack Developer
-- [@Cochises](link-to-your-GitHub-profile) - FrontEnd Developer
-- [@jumair](link-to-your-GitHub-profile) - BackEnd Developer
+- [@Mrec2](https://github.com/Mrec2) - FullStack Developer
+- [@Cochises](https://github.com/Cochises) - FrontEnd Developer
+- [@jumair](https://github.com/jumair) - BackEnd Developer
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
