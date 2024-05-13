@@ -56,7 +56,4 @@ const RegisterComp = () => {
 }
 
 
-
-
-
 export default RegisterComp;
