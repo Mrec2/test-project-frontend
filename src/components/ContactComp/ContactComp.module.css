@@ -1,22 +1,89 @@
 .contactContainer {
-  display: grid;
-  place-items: center;
-  gap: 1rem;
-  margin-bottom: 250px;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    margin-top: 30px;
 }
 
 .contactForm {
-  display: grid;
-  gap: 0.5rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 30px 40px;
+    gap: 5px;
 }
 
-.contactForm label,
-.contactForm input,
-.contactForm textarea,
-.contactForm button {
-  width: 100%;
+.title {
+    font-size: 3.7rem;
+    text-align: center;
 }
 
-.contactForm textarea {
-  height: 200px; /* This makes the message input bigger */
+.inputsTitle {
+    font-size: 1.6rem;
+}
+
+input{
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    margin-bottom: 10px;
+}
+
+textarea{
+    max-height: 150px;
+    max-width: 100%;
+    min-height: 150px;
+    min-width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    margin-bottom: 15px;
+    padding: 12px 15px;
+}
+
+button{
+    padding: 15px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    display: inline-block;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    background-color: #000000e6;
+}
+
+
+
+/* MEDIA QUERYS: */
+
+@media (max-width: 500px) {
+
+    .contactContainer {
+        margin-top: 15px;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .contactForm {
+        width: 90%;
+        min-width: 250px;
+        max-width: 400px;
+        padding: 30px 20px;
+    }
+
+    textarea{
+        max-height: 100px;
+        max-width: 100%;
+        min-height: 100px;
+        min-width: 100%;
+    }
+
 }

@@ -27,35 +27,22 @@ body{
 
 
 .title{
+    font-size: 5rem;
     text-align: center;
-    font-size: 4.5rem;
     color: #000;
 }
 
-.botones{
-    width: 100%;
-    display: flex;
-    border-radius: 15px;
-    border: .1px solid gainsboro;
-}
-
-.btnEdit{
-    width: 50%;
-    padding: 15px;
-    border-radius: 15px;
-    background: none;
-    border: none;
-    text-align: center;
-    text-decoration: none;
+.subTitle{
+    font-size: 2.5rem;
     color: #000;
-    font-size: 14px;
-    cursor: pointer;
 }
 
-.btnRegister{
-    background-color: #0B0B0F;
-    color: white;
+.paragraph{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #000;
 }
+
 
 .inputs{
     padding: 18px 10px;
@@ -64,14 +51,6 @@ body{
     font-size: 14px;
 }
 
-.link{
-    font-size: 13px;
-    text-decoration: none;
-}
-
-.linkCenter{
-    text-align: center;
-}
 
 .btn{
     padding: 20px 0;
@@ -81,6 +60,13 @@ body{
     background-color: #0B0B0F;
     color: white;
     cursor: pointer;
+}
+
+.linkCenter{
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    color: #000;
 }
 
 

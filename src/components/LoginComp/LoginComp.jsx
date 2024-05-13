@@ -1,74 +1,54 @@
-import { Link } from "react-router-dom";
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from "./LoginComp.module.css";
 
-const LoginComp = (props) => {
+const LoginComp = () => {
 
-  const [usuario, setUsuario] = useState('');
-  const [password, setPassword] = useState('');
+    return (
 
-  const handleSubmit = () => { }
+            <div className={styles.container}>
 
-  return (
-    <div className={styles.login}>
+                <form className={styles.formulario}>
 
-      <div className={styles.loginContenedor}>
+                    <h1 className={styles.title}>QuizMatrix</h1>
 
-        <div className={styles.loginContenedorTexto}>
-          <h2>LOGIN</h2>
-        </div>
+                    <div className={styles.botones}>
+                        <Link to="/login" className={`${styles.btnLogin} ${styles.btnEdit}`}>Iniciar sesión</Link>
+                        <Link to="/register" className={`${styles.btnRegister} ${styles.btnEdit}`}>Registrarse</Link>
+                    </div>
 
-        <div className={styles.loginContenedorError}>{props.errorText}</div>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Escribe tu correo electrónico"
+                        className={styles.inputs}
+                        required
+                    />
 
-        <form onSubmit={handleSubmit} className={styles.loginContenedorform}>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        placeholder="Escribe tu contraseña"
+                        className={styles.inputs}
+                        required
+                    />
 
-          <div className={styles.oneColumn}>
-            <input
-              type="text"
-              name="usuario"
-              required
-              autoFocus
-              placeholder="Usuario"
-              value={usuario}
-              onChange={e => setUsuario(e.target.value)}
-            />
-          </div>
+                    <Link to="/recover-account" className={styles.link}>¿Olvidaste tu contraseña?</Link>
 
-          <div className={styles.oneColumn}>
-            <input
-              type="password"
-              name="password"
-              required
-              placeholder="Password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-            />
-          </div>
+                    <button type="submit" className={styles.btn}>Iniciar sesión</button>
 
-          <div className={styles.botonesContenedor}>
+                    <Link to="/register" className={`${styles.link} ${styles.linkCenter}`}>¿Aún no eres miembro? ¡Regístrate ahora!</Link>
 
-            <button className={styles.btn} type="submit">
-              Login
-            </button>
+                </form>
 
-            <div className={styles.loginEnlaceSingin}>
-              <Link to="/register" className={styles.enlaceCrearUsuario}>Crear Usuario</Link>
             </div>
 
-          </div>
+    );
 
-        </form>
-
-      </div>
-
-    </div>
-  );
 }
 
-LoginComp.propTypes = {
-  errorText: PropTypes.string.isRequired,
-};
 
 export default LoginComp;
