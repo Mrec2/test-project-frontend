@@ -11,11 +11,12 @@ class TestAxios extends InitAxios {
   constructor() {
     // IMPORTANTE -> AHORA ES preguntas el servlet
 
-    super("http://localhost:8080/QuizMatrix-backend/preguntas/");
+    // super("http://localhost:8080/QuizMatrix-backend/preguntas/");
     // super("http://localhost:8080/QuizMatrix-backend/testServlet/");
     // super("http://localhost:8080/QuizMatrix-backend/testServlet");
-    // Alberto super("http://localhost:8080/QuizMatrix-backend/testServlet");
-  }
+    // Alberto 
+    super("http://localhost:8080/api/questions");
+  } 
 
   async postTest(data) {
     try {

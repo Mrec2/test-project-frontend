@@ -1,33 +1,67 @@
-/* body {
-  color: red;
-} */
-
-.testDoingContainer h2 {
-  color: #fff;
-  width: 100%;
-  max-width: 1200px;
+.testDoingContainer{
+    /* background-color: red; */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.testDoingContainer h1 {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto 30px auto;
+.testDoingQuestions{
+    /* background-color: blue; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.testDoingTitle {
     color: #ffffff;
     text-align: center;
     font-size: 6.5rem;
     font-weight: 900;
+    margin: 30px 0;
 }
 
-.tituloPregunta {
-    font-size: 2.5rem;
+.testDoingTitleQuestions {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testDoingOptions{
+    color: #868f97;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.testDoingPregunta{
+    /* background-color: orangered; */
+    margin-bottom: 60px;
+}
+
+.testDoingPreguntaSeparacion{
     margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
 }
 
-.testDoingContainer div {
-    margin: 20px auto;
-    max-width: 1200px;
-    width: 90%;
+.testDoingInput{
+    cursor: pointer;
 }
+
+.containerBtn{
+    text-align: center;
+}
+
+.testDoingBtn{  
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.testDoingBtn:hover{
+    background-color: #d6d6d6;
+}
+
 
 .testDoingContainer ul {
     list-style-type: none;
@@ -44,7 +78,6 @@
     font-family: "Inter", sans-serif;
     font-size: 1.8rem;
     color: #868f97;
-    /* width: 500px; */
     width: 100%;
     text-align: center;
     border: 1px solid;
@@ -52,22 +85,57 @@
     max-width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
+
+
+/* MEDIA QUERYS: */
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 1010px (993px - 1200px)*/
+@media screen and (min-width: 1010px) and (max-width: 1200px) {
+
+    .testDoingQuestions{
+        width: 80%;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 1010px)*/
+@media screen and (min-width: 769px) and (max-width: 1010px) {
+
+    .testDoingQuestions{
+        width: 80%;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+
+    .testDoingQuestions{
+        width: 80%;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px){
+
+    .testDoingQuestions{
+        width: 90%;
+    }
+
+    .testDoingTitle {
+        font-size: 6rem;
+        margin: 0 0 20px;
+    }
+
+    .testDoingTitleQuestions {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .testDoingPreguntaSeparacion{
+        margin-bottom: 35px;
+    }
+   
     
-    /* .testDoingContainer{
-        background-color: red;
-    } */
-
-    .testDoingContainer ul {
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-
-    .testDoingContainer li {
-         width: 100%;
-    }
 }

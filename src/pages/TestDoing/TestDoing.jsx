@@ -1,70 +1,3 @@
-// import { useEffect, useState } from "react";
-// import styles from "./TestDoing.module.css";
-// import EnviarRespuestaAxios from "../../../services/enviarRespuestaAxios";
-
-// const TestDoing = () => {
-//   // Define el estado para almacenar los datos
-//   const [datos, setDatos] = useState([]);
-//   const [miTest, setMiTest] = useState("");
-
-//   const pruebaJson = {
-//     id: 1,
-//     idPregunta: 1,
-//     idRespuesta: 1,
-//   };
-
-//   const sendRespuestas = () => {
-//     const respAxios = new EnviarRespuestaAxios();
-//     respAxios.postRespuestas(JSON.stringify(pruebaJson));
-//   };
-
-//   useEffect(() => {
-//     const datosLocalStorage = localStorage.getItem("misDatos");
-//     if (datosLocalStorage) {
-//       console.log("misDatos", datosLocalStorage);
-//       setDatos(JSON.parse(datosLocalStorage));
-//     }
-//   }, []);
-
-//   useEffect(() => {
-//     const datosLocalStorage = localStorage.getItem("queTest");
-//     if (datosLocalStorage) {
-//       console.log("miTest", datosLocalStorage);
-//       setMiTest(datosLocalStorage);
-//     }
-//   }, []);
-
-//   return (
-//     <div className={styles.testDoingContainer}>
-//       {miTest === "Javascript" && <h1>Test de Javascript</h1>}
-//       {miTest === "CSS" && <h1>Test de CSS</h1>}
-//       {miTest === "HTML" && <h1>Test de HTML</h1>}
-//       {miTest === "Java" && <h1>Test de Java</h1>}
-//       <div>
-//         {datos.length > 0 ? (
-//           datos.map((item, index) => (
-//             <div key={index}>
-//               <h2 className={styles.tituloPregunta}>{item.pregunta}</h2>
-//               <ul>
-//                 {item.opciones.map((opcion, opcionIndex) => (
-//                   <li key={opcionIndex}>{opcion}</li>
-//                 ))}
-//               </ul>
-//             </div>
-//           ))
-//         ) : (
-//           <p>No hay datos</p>
-//         )}
-//       </div>
-//       <button type="button" onClick={sendRespuestas}>
-//         Enviar respuestas
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default TestDoing;
-
 import { useEffect, useState } from "react";
 import styles from "./TestDoing.module.css";
 import EnviarRespuestaAxios from "../../../services/enviarRespuestaAxios";
@@ -122,21 +55,21 @@ const TestDoing = () => {
 
         <div className={styles.testDoingContainer}>
 
-            {miTest && <h1>Test de {miTest}</h1>}
+            {miTest && <h1 className={styles.testDoingTitle}>Test de {miTest}</h1>}
 
-            <div>
+            <div className={styles.testDoingQuestions}>
 
                 {datos.length > 0 ? (
 
                     datos.map((item, index) => (
 
-                        <div key={index}>
+                        <div key={index} className={styles.testDoingPregunta}>
 
-                            <h2 className={styles.tituloPregunta}>{item.pregunta}</h2>
+                            <h2 className={styles.testDoingTitleQuestions}>{item.question}</h2>
 
-                            {item.opciones.map((opcion, opcionIndex) => (
+                            {item.bodyOptions.map((opcion, opcionIndex) => (
 
-                                <div key={opcionIndex}>
+                                <div key={opcionIndex} className={styles.testDoingPreguntaSeparacion}>
 
                                     <input
                                         type="radio"
@@ -144,9 +77,10 @@ const TestDoing = () => {
                                         name={`opcion-${index}`}
                                         value={opcionIndex}
                                         onChange={() => handleRespuestaChange(index, opcionIndex)}
+                                        className={styles.testDoingInput}
                                     />
 
-                                    <label htmlFor={`opcion-${index}-${opcionIndex}`}>
+                                    <label htmlFor={`opcion-${index}-${opcionIndex}`} className={styles.testDoingOptions}>
                                         {opcion}
                                     </label>
 
@@ -162,11 +96,16 @@ const TestDoing = () => {
                     <p>No hay datos</p>
                 )}
 
+                <div className={styles.containerBtn}>
+                    <button type="button" onClick={sendRespuestas} className={styles.testDoingBtn}>
+                        Enviar respuestas
+                    </button>
+                </div>
+                
+
             </div>
 
-            <button type="button" onClick={sendRespuestas}>
-                Enviar respuestas
-            </button>
+            
 
         </div>
 
