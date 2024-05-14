@@ -3,53 +3,40 @@ import styles from "./TestDoing.module.css";
 import EnviarRespuestaAxios from "../../../services/enviarRespuestaAxios";
 
 const TestDoing = () => {
+  const [datos, setDatos] = useState([]);
+  const [miTest, setMiTest] = useState("");
+  const [respuestas, setRespuestas] = useState([]);
 
-    const [datos, setDatos] = useState([]);
-    const [miTest, setMiTest] = useState("");
-    const [respuestas, setRespuestas] = useState([]);
+  const sendRespuestas = () => {
+    const respuestasEnviadas = datos.map((item, index) => ({
+      pregunta: item.pregunta,
+      respuesta: item.opciones[respuestas[index]],
+    }));
 
-    const sendRespuestas = () => {
+    const respAxios = new EnviarRespuestaAxios();
 
-        const respuestasEnviadas = datos.map((item, index) => ({
+    respAxios.postRespuestas(JSON.stringify(respuestasEnviadas));
+  };
 
-            pregunta: item.pregunta,
-            respuesta: item.opciones[respuestas[index]],
+  const handleRespuestaChange = (index, respuestaId) => {
+    const nuevasRespuestas = [...respuestas];
+    nuevasRespuestas[index] = respuestaId;
+    setRespuestas(nuevasRespuestas);
+  };
 
-        }));
+  useEffect(() => {
+    const datosLocalStorage = localStorage.getItem("misDatos");
+    if (datosLocalStorage) {
+      setDatos(JSON.parse(datosLocalStorage));
+    }
+  }, []);
 
-        const respAxios = new EnviarRespuestaAxios();
-        
-        respAxios.postRespuestas(JSON.stringify(respuestasEnviadas));
-
-    };
-
-    const handleRespuestaChange = (index, respuestaId) => {
-
-        const nuevasRespuestas = [...respuestas];
-        nuevasRespuestas[index] = respuestaId;
-        setRespuestas(nuevasRespuestas);
-
-    };
-
-    useEffect(() => {
-
-        const datosLocalStorage = localStorage.getItem("misDatos");
-
-        if (datosLocalStorage) {
-            setDatos(JSON.parse(datosLocalStorage));
-        }
-
-    }, []);
-
-    useEffect(() => {
-
-        const datosLocalStorage = localStorage.getItem("queTest");
-
-        if (datosLocalStorage) {
-            setMiTest(datosLocalStorage);
-        }
-
-    }, []);
+  useEffect(() => {
+    const datosLocalStorage = localStorage.getItem("queTest");
+    if (datosLocalStorage) {
+      setMiTest(datosLocalStorage);
+    }
+  }, []);
 
     return (
 
