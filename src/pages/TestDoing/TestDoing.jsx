@@ -97,6 +97,8 @@ const TestDoing = () => {
 
   useEffect(() => {
     const datosLocalStorage = localStorage.getItem("misDatos");
+    console.log("misDatos", datosLocalStorage);
+    alert("misDatos", datosLocalStorage);
     if (datosLocalStorage) {
       setDatos(JSON.parse(datosLocalStorage));
     }
@@ -109,15 +111,17 @@ const TestDoing = () => {
     }
   }, []);
 
+  console.log("datos.length", datos.length);
+
   return (
     <div className={styles.testDoingContainer}>
       {miTest && <h1>Test de {miTest}</h1>}
       <div>
-        {datos.length > 0 ? (
+        {datos.length != 0 ? (
           datos.map((item, index) => (
             <div key={index}>
-              <h2 className={styles.tituloPregunta}>{item.pregunta}</h2>
-              {item.opciones.map((opcion, opcionIndex) => (
+              <h2 className={styles.tituloPregunta}>{item.question}</h2>
+              {item.bodyOptions.map((opcion, opcionIndex) => (
                 <div key={opcionIndex}>
                   <input
                     type="radio"
