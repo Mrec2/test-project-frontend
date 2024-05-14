@@ -1,115 +1,123 @@
-.login {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #0B0B0F;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario {
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
     display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 31px 12px rgba(36,36,36,1);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 85vh;
-    font-size: 2rem;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 30px 40px;
+    overflow: hidden;
 }
 
-.loginContenedor {
-    display: grid;
-    gap: 2rem;
-    width: 40vw;
-    height: 50rem;
-    grid-template-columns: 1fr;
-    border: 2px solid orangered;
-    border-radius: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+.title {
+    text-align: center;
+    font-size: 4.5rem;
+    color: #000;
 }
 
-.loginContenedorTexto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: orange;
-    margin-top: -5rem;
-}
-
-.loginContenedorError {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    margin-top: -5rem;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    height: 4rem;
-}
-
-.loginContenedorform {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-    padding: 2rem 8rem;
-    margin-top: -18rem;
-}
-
-.oneColumn {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-    font-size: 1.8rem;
-}
-
-input {
-    color: black;
-    font-weight: bolder;
-    padding: 0.5rem 0;
+.botones {
     width: 100%;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: 1px solid blue;
-    background-color: transparent;
-    transition: 0.5s all ease-in-out;
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-input:focus {
-    outline: none;
-    border-bottom: 3px solid orangered;
-}
-
-.botonesContenedor {
     display: flex;
-    align-items: center;
+    border-radius: 15px;
+    border: .1px solid gainsboro;
+}
+
+.btnEdit {
+    width: 50%;
+    padding: 15px;
+    border-radius: 15px;
+    background: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btnLogin {
+    background-color: #0B0B0F;
+    color: white;
+}
+
+.inputs {
+    padding: 18px 10px;
+    border-radius: 10px;
+    border: .1px solid gainsboro;
+    font-size: 14px;
+}
+
+.link {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #0B0B0F;
+}
+
+.linkCenter {
+    text-align: center;
 }
 
 .btn {
-    width: 17rem;
-    height: 6rem;
-    color: orangered;
-    background-color: lightgray;
-    font-size: 1.8rem;
-    font-weight: bold;
-    border-radius: 5rem;
-    border: 1px solid white;
-    transition: 0.5s all ease-in-out;
-}
-
-.btn:hover {
+    padding: 20px 0;
+    border-radius: 10px;
+    border: .1px solid gainsboro;
+    font-size: 14px;
+    background-color: #0B0B0F;
     color: white;
-    background-color: orangered;
-    border: 1px solid orangered;
-}
-
-.loginEnlaceSingin {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-}
-
-.enlaceCrearUsuario {
-    text-decoration: none;
-    color: black;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    transition: 0.5s all ease-in-out; 
-}
-
-.enlaceCrearUsuario:hover {
-    color: orangered;
     cursor: pointer;
+}
+
+
+/* MEDIA QUERYS: */
+
+@media (max-width: 500px) {
+
+    .botones {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        border: .1px solid gainsboro;
+    }
+
+    .btnEdit {
+        width: 100%;
+    }
+
+    .formulario {
+        width: 90%;
+        min-width: 250px;
+        max-width: 400px;
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .inputs {
+        padding: 15px 10px;
+    }
+
+    .btnEdit {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 15px 0;
+    }
+
 }
