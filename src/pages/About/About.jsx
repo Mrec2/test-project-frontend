@@ -9,7 +9,7 @@ const About = () => {
         nombre: "Mario Fernández",
         descripcion: "Full Stack Developer",
         tecnologias: "Mongo DB, ExpressJS, ReactJS, NodeJS",
-        fotoImg: "https://media.licdn.com/dms/image/D4D35AQGmK4N-NralDA/profile-framedphoto-shrink_800_800/0/1663588454959?e=1712563200&v=beta&t=y-whG6A1HePxPTo8VjKrYSOsWg9rH8nwHap7turMWIk",
+        fotoImg: "https://media.licdn.com/dms/image/D4D35AQGmK4N-NralDA/profile-framedphoto-shrink_800_800/0/1663588454959?e=1716292800&v=beta&t=hN9R0X9aK3IIv-PT6v7G9AZrLT87xc5lW54SIj9WrgA",
     };
 
     const empleado2 = {
