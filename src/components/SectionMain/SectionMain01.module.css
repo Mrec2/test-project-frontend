@@ -24,7 +24,7 @@
 }
 
 .sectionPrincipalTitulo {
-    font-size: 6rem;
+    font-size: 8rem;
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -49,11 +49,17 @@
 .sectionImagen {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
 .imgPortada {
     width: 530px;
+}
+
+.sectionPrincipalDescripcion{
+    font-size: 1.8rem;
+    color: #868f97;
+    line-height: 1.5;
 }
 
 /* MEDIA QUERYS: */
@@ -207,6 +213,10 @@
 
     .imgPortada {
         width: 100%;
+    }
+
+    .sectionPrincipalDescripcion{
+        font-size: 1.8rem;
     }
 }
 

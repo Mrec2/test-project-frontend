@@ -7,7 +7,7 @@
 :root {
     --bg-color: #222327;
     --text-color: #fff;
-    --main-color: #29fd53;
+    --main-color: #f1f1f1;
 }
 
 .contenedor {
@@ -46,7 +46,7 @@
 }
 
 .navbar a:hover {
-    color: var(--main-color);
+    color: #666d89;
 }
 
 .main {
@@ -115,11 +115,11 @@
         margin: 12px 0;
         padding: 0 25px;
         transition: all .50s ease;
-
+        color: black;
     }
 
     .navbar a:hover {
-        color: var(--text-color);
+        color: #222327;
         transform: translateY(5px);
     }
 
@@ -162,11 +162,11 @@
         margin: 12px 0;
         padding: 0 25px;
         transition: all .50s ease;
-
+        color: black;
     }
 
     .navbar a:hover {
-        color: var(--text-color);
+        color: #222327;
         transform: translateY(5px);
     }
 
@@ -209,10 +209,11 @@
         margin: 12px 0;
         padding: 0 25px;
         transition: all .50s ease;
+        color: black;
     }
 
     .navbar a:hover {
-        color: var(--text-color);
+        color: #222327;
         transform: translateY(5px);
     }
 

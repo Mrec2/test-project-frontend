@@ -8,12 +8,18 @@
     display: flex;
     place-items: center;
     gap: 80px;
-    padding-bottom: 80px;
 }
 
 .seccionInfoTitle {
     font-size: 4.2rem;
     line-height: 1.5;
+}
+
+.seccionInfoTexto{
+    font-size: 1.8rem;
+    color: #868f97;
+    line-height: 1.7;
+    padding: 20px 0;
 }
 
 .seccionImagenIcon {
@@ -37,6 +43,7 @@
     .seccionImagenIcon {
         width: 320px;
     }
+
 }
 
 /* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 992px)*/
@@ -55,6 +62,7 @@
     .seccionImagenIcon {
         width: 280px;
     }
+
 }
 
 /* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
@@ -73,6 +81,7 @@
     .seccionImagenIcon {
         width: 250px;
     }
+
 }
 
 /* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
