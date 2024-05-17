@@ -1,44 +1,110 @@
-.aboutMain {
-    width: 100%;
+/* GLOBALES */
+.aboutMain{
     max-width: 1200px;
-    margin: 0 auto; 
+    /* background-color: red; */
+    overflow: hidden;
+    margin: 30px 0 0 0;
 }
 
-.aboutSection {
-    display: grid;
-    grid-template-columns: 1fr 1.7fr;
-    gap: 50px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, .1);
-    box-shadow: 0px 7px 15px 0px rgba(255,255,255,0.1);
-    margin: 20px 0 40px;
+
+/* SECCION IMAGEN */
+.imgAboutSection{
+    /* background-color: blue; */
+    max-width: 1200px;
+    height: 200px;
+    margin: 50px 0 50px;
+    overflow: hidden;
 }
 
-.imgAboutSection {
-    width: 100%;
-    height: 100%;
+.imgAbout{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.imgAboutSection > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 0 0 10px;
+
+/* SECCION TEXTO */
+.textoAboutSection{
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
 }
 
-.textoAboutSection > h2 {
-    font-size: 2.5rem;
-    font-weight: bolder;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.title{
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 30px;
 }
 
-.textoAboutSection > p {
-    margin-bottom: 1rem;
-    text-align: justify;
-    font-family: "Inter", sans-serif;
+.paragraph{
     font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
     color: #868f97;
-    margin-right: 50px;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+}
+
+.paragraph:last-child{
+    margin: 0;
+}
+
+
+
+/* MEDIA QUERYS: */
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor hasta 1200px (993px - 1200px)*/
+@media screen and (min-width: 1010px) and (max-width: 1200px) {
+
+    .title{
+        padding-top: 30px;
+    }
+
+    .imgAboutSection{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 769px (769px - 1010px)*/
+@media screen and (min-width: 769px) and (max-width: 1010px) {
+
+    .title{
+        padding-top: 30px;
+    }
+
+    .imgAboutSection{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+
+    .title{
+        padding-top: 30px;
+    }
+
+    .imgAboutSection{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+/* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
+@media screen and (max-width: 575px){
+
+    .title{
+        font-size: 5rem;
+        padding-top: 30px;
+    }
+   
+    .imgAboutSection{
+        width: 85%;
+        margin: 0 auto;
+        height: 150px;
+    }
+    
 }

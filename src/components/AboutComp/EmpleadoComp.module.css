@@ -6,43 +6,35 @@
 }
 
 .cards{
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px 0;
+    width: 250px;
     max-width: 1200px;
-    min-height: 450px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* row-gap: 10rem;
-    column-gap: 1rem; */
     gap: 50px;
     flex-wrap: wrap;
-    /* background-color: aqua; */
+    /* background-color: blue; */
     overflow: hidden;
+    transition: .5s;
 }
 
-.cardItem{
-    width: 350px;
-    max-width: 350px;
-    height: auto;
-    max-height: 600px;
-
-    flex-basis: 350px;
-    flex-grow: 1;
-
-    border-radius: 10px;
-    /* box-shadow: 0px 7px 15px 0px rgba(255,255,255,0.1); */
-    
-    background-color: #111116;
-    border: 1px solid rgba(255, 255, 255, .1);
-}
-
-/* .cardItem:hover{
+.cards:hover{
     transform: scale(1.05);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, .1);
-} */
+}
+
+.cardItem{
+    width: 150px;
+    max-width: 350px;
+    min-height: 400px;
+    max-height: 600px;
+    flex-basis: 350px;
+    flex-grow: 1;
+    border-radius: 10px;
+    background-color: #111116;
+    border: 1px solid rgba(255, 255, 255, .1);
+}
 
 .cardContent{
     width: 100%;
@@ -50,7 +42,7 @@
     margin: 0 auto;
 }
 
-.cardPicture{ 
+.cardPicture{
     width: 85%;
     margin: 20px auto;
 }
@@ -100,15 +92,16 @@
     box-shadow: 0px 7px 15px 0px rgba(255,255,255,0.1);
     text-align: center;
     cursor: pointer;
-}  
+}
 
 .cardBtn:hover{
-    background-color: #fe0000;
+    background-color: #ececec;
+    color: black;
 }
 
 
 @media screen and (max-width: 1250px) {
-    
+
     .cards{
         width: 80%;
         justify-content: center;
@@ -117,16 +110,18 @@
 }
 
 
-
-
 /* MEDIA QUERYS: */
 
 /* Estilos para dispositivos con ancho de pantalla igual o mayor a 993px (993px - 1200px)*/
 @media screen and (min-width: 993px) and (max-width: 1200px) {
 
     .cards{
-        width: 80%;
+        width: 90%;
         /* background-color: orangered; */
+    }
+
+    .cardItem{
+        width: 300px;
     }
 
 }
@@ -135,27 +130,37 @@
 @media screen and (min-width: 769px) and (max-width: 992px) {
 
     .cards{
-        width: 80%;
-        /* background-color: rgb(58, 188, 14); */
+        width: 100%;
     }
+
+    .cardItem{
+        width: 300px;
+    }
+
 }
 
 /* Estilos para dispositivos con ancho de pantalla igual o mayor a 576px (576px - 768px)*/
 @media screen and (min-width: 576px) and (max-width: 768px) {
 
     .cards{
-        width: 80%;
-        /* background-color: rgb(1, 44, 28); */
-        justify-content: center;
+        width: 100%;
     }
+
+    .cardItem{
+        width: 300px;
+    }
+
 }
 
 /* Estilos para dispositivos con ancho de pantalla menor a 576px (0px - 576px)*/
 @media screen and (max-width: 575px) {
 
     .cards{
-        width: 80%;
-        /* background-color: rgb(15, 0, 124); */
-        justify-content: center;
+        width: 100%;
     }
+
+    .cardItem{
+        width: 50%;
+    }
+
 }

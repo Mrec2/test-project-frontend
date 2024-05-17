@@ -3,7 +3,7 @@ import styles from "./EmpleadoComp.module.css";
 
 const EmpleadoComp = ({ empleado }) => {
 
-    const { nombre, descripcion, tecnologias, fotoImg } = empleado;
+    const { nombre, descripcion, tecnologias, fotoImg, contacto } = empleado;
 
     return (
         <>
@@ -15,7 +15,7 @@ const EmpleadoComp = ({ empleado }) => {
 
                         <figure className={styles.cardPicture}>
 
-                            <a href="linkedin.com/in/cochises">
+                            <a href="#">
                                 <img
                                     src={fotoImg}
                                     alt="Imagen de Tecnologia"
@@ -43,7 +43,11 @@ const EmpleadoComp = ({ empleado }) => {
 
                         <section className={styles.cardContenedorBtn}>
 
-                            <a href="#" className={styles.cardBtn}>Contáctame</a>
+                            <a 
+                                href={contacto}
+                                target="_blank" 
+                                className={styles.cardBtn}
+                            >Contáctame</a>
 
                         </section>
 
