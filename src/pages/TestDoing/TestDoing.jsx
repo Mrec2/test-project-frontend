@@ -8,13 +8,17 @@ const TestDoing = () => {
   const [respuestas, setRespuestas] = useState([]);
 
   const sendRespuestas = () => {
+    // console.log("respuestas", respuestas);
+    // console.log("datos", datos);
+    // console.log("datos de 0", datos[0]);
+    // console.log("index respuesta", respuestas);
     const respuestasEnviadas = datos.map((item, index) => ({
-      pregunta: item.pregunta,
-      respuesta: item.opciones[respuestas[index]],
+      question: item.question,
+      answer: item.bodyOptions[respuestas[index]],
     }));
 
     const respAxios = new EnviarRespuestaAxios();
-
+    console.log("respuestasEnviadas", respuestasEnviadas);
     respAxios.postRespuestas(JSON.stringify(respuestasEnviadas));
   };
 
@@ -38,66 +42,58 @@ const TestDoing = () => {
     }
   }, []);
 
-    return (
+  return (
+    <div className={styles.testDoingContainer}>
+      {miTest && <h1 className={styles.testDoingTitle}>Test de {miTest}</h1>}
 
-        <div className={styles.testDoingContainer}>
+      <div className={styles.testDoingQuestions}>
+        {datos.length > 0 ? (
+          datos.map((item, index) => (
+            <div key={index} className={styles.testDoingPregunta}>
+              <h2 className={styles.testDoingTitleQuestions}>
+                {item.question}
+              </h2>
 
-            {miTest && <h1 className={styles.testDoingTitle}>Test de {miTest}</h1>}
+              {item.bodyOptions.map((opcion, opcionIndex) => (
+                <div
+                  key={opcionIndex}
+                  className={styles.testDoingPreguntaSeparacion}
+                >
+                  <input
+                    type="radio"
+                    id={`opcion-${index}-${opcionIndex}`}
+                    name={`opcion-${index}`}
+                    value={opcionIndex}
+                    onChange={() => handleRespuestaChange(index, opcionIndex)}
+                    className={styles.testDoingInput}
+                  />
 
-            <div className={styles.testDoingQuestions}>
-
-                {datos.length > 0 ? (
-
-                    datos.map((item, index) => (
-
-                        <div key={index} className={styles.testDoingPregunta}>
-
-                            <h2 className={styles.testDoingTitleQuestions}>{item.question}</h2>
-
-                            {item.bodyOptions.map((opcion, opcionIndex) => (
-
-                                <div key={opcionIndex} className={styles.testDoingPreguntaSeparacion}>
-
-                                    <input
-                                        type="radio"
-                                        id={`opcion-${index}-${opcionIndex}`}
-                                        name={`opcion-${index}`}
-                                        value={opcionIndex}
-                                        onChange={() => handleRespuestaChange(index, opcionIndex)}
-                                        className={styles.testDoingInput}
-                                    />
-
-                                    <label htmlFor={`opcion-${index}-${opcionIndex}`} className={styles.testDoingOptions}>
-                                        {opcion}
-                                    </label>
-
-                                </div>
-
-                            ))}
-
-                        </div>
-
-                    ))
-
-                ) : (
-                    <p>No hay datos</p>
-                )}
-
-                <div className={styles.containerBtn}>
-                    <button type="button" onClick={sendRespuestas} className={styles.testDoingBtn}>
-                        Enviar respuestas
-                    </button>
+                  <label
+                    htmlFor={`opcion-${index}-${opcionIndex}`}
+                    className={styles.testDoingOptions}
+                  >
+                    {opcion}
+                  </label>
                 </div>
-                
-
+              ))}
             </div>
+          ))
+        ) : (
+          <p>No hay datos</p>
+        )}
 
-            
-
+        <div className={styles.containerBtn}>
+          <button
+            type="button"
+            onClick={sendRespuestas}
+            className={styles.testDoingBtn}
+          >
+            Enviar respuestas
+          </button>
         </div>
-
-    );
-
+      </div>
+    </div>
+  );
 };
 
 export default TestDoing;
