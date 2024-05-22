@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./testResults.module.css";
 
 const TestResults = () => {
   const [data, setData] = useState("");
@@ -12,11 +13,13 @@ const TestResults = () => {
   }, []);
 
   return (
-    <div>
-      <h2>
+    <div class={styles.testResultsContainer}>
+      <h2 class = {styles.testTestResultsTitle}>
         La puntuación de tu test es de <span>{data}</span> puntos sobre 25
       </h2>
-      <h2>{(data / 25) * 10}</h2>
+      <h2 class = {styles.testResultsScore}>
+        {(data / 25) * 100}%                  {(data / 25) * 100 > 50 ? "Has superado el test" : "N.M Necesitas mejorar"}
+      </h2>
     </div>
   );
 };
