@@ -9,7 +9,7 @@ const About = () => {
         nombre: "Mario Fernández",
         descripcion: "Full Stack Developer",
         tecnologias: "Mongo DB, ExpressJS, ReactJS, NodeJS",
-        fotoImg: "/public/Fundadores/foto-juan-mario.jpeg",
+        fotoImg: "/Fundadores/foto-juan-mario.jpeg",
         contacto: "https://www.linkedin.com/in/jmfpinedo/"
         
     };
@@ -18,7 +18,7 @@ const About = () => {
         nombre: "Alberto González",
         descripcion: "Front-end Developer",
         tecnologias: "HTML, CSS, Bootstrap 5, Sass, Javascript, React",
-        fotoImg: "/public/Fundadores/foto-alberto-gonzalez.jpeg",
+        fotoImg: "/Fundadores/foto-alberto-gonzalez.jpeg",
         contacto: "https://www.linkedin.com/in/cochises/"
     };
 
@@ -26,7 +26,7 @@ const About = () => {
         nombre: "Juan Manuel",
         descripcion: "Back-end Developer",
         tecnologias: "Javascript, ReactJS, Python, Flask",
-        fotoImg: "/public/Fundadores/foto-juan-manuel.jpeg",
+        fotoImg: "/Fundadores/foto-juan-manuel.jpeg",
         contacto: "https://www.linkedin.com/in/juan-manuel-iriondo-ortega-45a30128/"
     };
 
@@ -34,7 +34,7 @@ const About = () => {
         nombre: "Juan Alberto",
         descripcion: "Back-end Developer",
         tecnologias: "Java, Spring, SpringBoot, MySql, Hibernate",
-        fotoImg: "/public/Fundadores/foto-juan-alberto.jpeg",
+        fotoImg: "/Fundadores/foto-juan-alberto.jpeg",
         contacto: "https://www.linkedin.com/in/jamunozanares/"
     };
 
