@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./TestDoing.module.css";
+import styles from "./testDoing.module.css";
 import EnviarRespuestaAxios from "../../../services/enviarRespuestaAxios";
 
 const TestDoing = () => {
