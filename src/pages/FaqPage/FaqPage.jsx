@@ -1,4 +1,4 @@
-import Faq from "../../components/FAQ/FAQ";
+import Faq from "../../components/Faq/Faq";
 
 import styles from "./FaqPage.module.css";
 
