@@ -8,10 +8,6 @@ const TestDoing = () => {
   const [respuestas, setRespuestas] = useState([]);
 
   const sendRespuestas = () => {
-    // console.log("respuestas", respuestas);
-    // console.log("datos", datos);
-    // console.log("datos de 0", datos[0]);
-    // console.log("index respuesta", respuestas);
     const respuestasEnviadas = datos.map((item, index) => ({
       question: item.question,
       answer: item.bodyOptions[respuestas[index]],
