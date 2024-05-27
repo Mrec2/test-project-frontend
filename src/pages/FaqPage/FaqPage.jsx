@@ -1,11 +1,11 @@
-import Faq from "../../components/Faq/Faq";
+import FAQ from "../../components/FAQ/FAQ";
 
 import styles from "./FaqPage.module.css";
 
 const FaqPage = () => {
   return (
     <>
-      <Faq />
+      <FAQ />
     </>
   );
 };
