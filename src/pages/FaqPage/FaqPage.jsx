@@ -1,6 +1,6 @@
 import Faq from "../../components/FAQ/Faq";
 
-import styles from "./FaqPage.module.css";
+//import styles from "./FaqPage.module.css";
 
 const FaqPage = () => {
   return (
