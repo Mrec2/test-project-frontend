@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./testResults.module.css";
-import styles from "./testResults.module.css";
 
 const TestResults = () => {
   const [data, setData] = useState("");
