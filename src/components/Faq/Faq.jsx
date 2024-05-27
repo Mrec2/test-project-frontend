@@ -1,6 +1,6 @@
 import styles from "./Faq.module.css";
 
-const FAQ = () => {
+const Faq = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.tituloPrincipal}>Preguntas frecuentes</h2>
@@ -134,4 +134,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;
